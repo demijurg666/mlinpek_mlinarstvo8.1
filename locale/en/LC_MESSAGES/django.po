@@ -1,0 +1,505 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-03 22:36+0000\n"
+"PO-Revision-Date: 2023-01-03 21:43+0000\n"
+"Last-Translator:   <>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.9.8\n"
+
+#: ecommerce/settings.py:126
+msgid "English"
+msgstr "English"
+
+#: ecommerce/settings.py:127
+msgid "Serbian"
+msgstr "Serbian"
+
+#: ecommerce/settings.py:128
+msgid "Simplified Chinese"
+msgstr "Simplified Chinese"
+
+#: ecommerce/urls.py:37
+msgid "admin/"
+msgstr "admin"
+
+#: store/templates/store/cart.html:43
+msgid "Korpa"
+msgstr "Cart"
+
+#: store/templates/store/cart.html:50
+msgid "Nastavi sa kupovinom"
+msgstr "Continiue shopping"
+
+#: store/templates/store/cart.html:60
+msgid "Stvari u korpi:"
+msgstr "Cart items: "
+
+#: store/templates/store/cart.html:64 store/templates/store/cart.html:96
+msgid "Ukupno:"
+msgstr "Total: "
+
+#: store/templates/store/cart.html:74 store/templates/store/checkout.html:19
+msgid "Kasa"
+msgstr "Checkout"
+
+#: store/templates/store/cart.html:84
+msgid "Slika:"
+msgstr "Image:"
+
+#: store/templates/store/cart.html:87
+msgid "Proizvod:"
+msgstr "View product:"
+
+#: store/templates/store/cart.html:90
+msgid "Cena:"
+msgstr "Price:"
+
+#: store/templates/store/cart.html:93
+msgid "Kolicina:"
+msgstr "Quantity:"
+
+#: store/templates/store/checkout.html:27
+msgid "Nazad u korpu"
+msgstr "Back to cart"
+
+#: store/templates/store/checkout.html:33
+msgid "Pregled porudžbine"
+msgstr "Order summary"
+
+#: store/templates/store/checkout.html:42
+msgid "Slika"
+msgstr "Image:"
+
+#: store/templates/store/checkout.html:48
+msgid "Proizvod"
+msgstr "Item:"
+
+#: store/templates/store/checkout.html:53
+msgid "Cena"
+msgstr "Price:"
+
+#: store/templates/store/checkout.html:59
+msgid "Kvantitet"
+msgstr "Quantity"
+
+#: store/templates/store/checkout.html:85
+msgid "Proizvodi: "
+msgstr "Items:"
+
+#: store/templates/store/checkout.html:90
+msgid "Ukupno: "
+msgstr "Total: "
+
+#: store/templates/store/checkout.html:97
+msgid "Potvrdite narudžbinu"
+msgstr "Confirm purchase"
+
+#: store/templates/store/checkout.html:112
+msgid " Da li ste sigurni da zelite da kupite ove proizvode?"
+msgstr "Are you sure you want to buy these items"
+
+#: store/templates/store/checkout.html:117
+msgid "Ne"
+msgstr "No"
+
+#: store/templates/store/index.html:36
+msgid ""
+" Mlinpek – mlinarstvo doo, Novi Sad\n"
+"            "
+msgstr "Mlinpek – mlinarstvo doo, Novi Sad"
+
+#: store/templates/store/index.html:41
+msgid ""
+" Bavi se poslovima iz oblasti prerade žita –\n"
+"            uglavnom pšenice: "
+msgstr "Engaged in business in the field of grain processing, mainly wheat"
+
+#: store/templates/store/index.html:47
+msgid ""
+" I Izrada projektne dokumentacije (Tehnologija,\n"
+"            aspiracija, pneumatski transport) "
+msgstr "I Project documentation (tehnology, aspiration, pneumatic transport) "
+
+#: store/templates/store/index.html:52 store/templates/store/mlin.html:26
+msgid "II Nadzor nad montažom opreme i puštanje u rad"
+msgstr "II Supervision of equipment assembly and startup"
+
+#: store/templates/store/index.html:55 store/templates/store/mlin.html:28
+msgid " III Konsultacije na temu mlinarstva"
+msgstr "III Consulting on wheat flour milling subject"
+
+#: store/templates/store/index.html:57
+msgid "IV Izdavaštvo:"
+msgstr "IV Publishing"
+
+#: store/templates/store/index.html:59 store/templates/store/mlin.html:30
+msgid "V Merenja:"
+msgstr "V Measurment:"
+
+#: store/templates/store/index.html:60 store/templates/store/mlin.html:31
+msgid "parametara strujanja vazduha (Q,dP)"
+msgstr "Air flow, pressure drop (Q, dP)"
+
+#: store/templates/store/index.html:61 store/templates/store/mlin.html:32
+msgid "efikasnosti rada mašina"
+msgstr "Machine eficiency"
+
+#: store/templates/store/index.html:63
+msgid ""
+" snimanje i analiza postojećeg dijagrama\n"
+"            mlevenja kroz softver Ashe Protein tabelle i Milltech\n"
+"            "
+msgstr ""
+"actual flow diagram- making and analysing through softwares Ashe Protein and "
+"Milltech"
+
+#: store/templates/store/index.html:68 store/templates/store/mlin.html:35
+#: store/templates/store/mlin.html:41
+msgid "VI Podešavanja:"
+msgstr "VI Adjusting:"
+
+#: store/templates/store/index.html:69 store/templates/store/mlin.html:42
+msgid "aspiracionih i pneumatskih sistema"
+msgstr "aspiration and pneumatic systems"
+
+#: store/templates/store/index.html:71
+msgid ""
+" procesne opreme (čistionica, mlin, silos za žito\n"
+"          i brašno) "
+msgstr "machines in cleaning, milling and storage plants"
+
+#: store/templates/store/index.html:76 store/templates/store/mlin.html:49
+msgid "VII Obuka kadrova za:"
+msgstr "VII Training:"
+
+#: store/templates/store/index.html:78 store/templates/store/mlin.html:51
+msgid "kratka škola mlevenja:"
+msgstr "short milling course"
+
+#: store/templates/store/index.html:80 store/templates/store/mlin.html:53
+msgid "rad na procesnim mašinama"
+msgstr "training on process machines"
+
+#: store/templates/store/index.html:82
+msgid ""
+" prevod uputstava za upotrebu mašina (sa\n"
+"          engleskog na srpski) "
+msgstr "translating manual instructions (english- serbian)"
+
+#: store/templates/store/index.html:87
+msgid "VIII Trgovina:"
+msgstr "VII Trading"
+
+#: store/templates/store/index.html:89
+msgid "uvoz mlinske opreme"
+msgstr "import the milling equipment"
+
+#: store/templates/store/izdavastvo.html:42
+msgid "Izdavastvo"
+msgstr "Publishing"
+
+#: store/templates/store/izdavastvo.html:73
+#: store/templates/store/izdavastvo.html:111
+#: store/templates/store/izdavastvo.html:151
+msgid " Na stanju: "
+msgstr "In stock: "
+
+#: store/templates/store/izdavastvo.html:74
+#: store/templates/store/izdavastvo.html:112
+#: store/templates/store/izdavastvo.html:152 store/templates/store/kurs.html:45
+#: store/templates/store/trgovina.html:52
+msgid "Cena: "
+msgstr "Price:"
+
+#: store/templates/store/izdavastvo.html:82
+msgid "Pogledaj prve stranice"
+msgstr "View first pages"
+
+#: store/templates/store/izdavastvo.html:90
+msgid " Pogledaj prvo poglavlje knjige"
+msgstr "View first chapter"
+
+#: store/templates/store/izdavastvo.html:120
+#: store/templates/store/izdavastvo.html:160
+msgid "Pogledaj početak knjige"
+msgstr "View beginning of the book"
+
+#: store/templates/store/kontakt.html:37 store/templates/store/nav.html:63
+msgid "Kontakt"
+msgstr "Contacts"
+
+#: store/templates/store/kontakt.html:41
+msgid ""
+" Email: nebojsa.spasojevic222@gmail.com\n"
+"        "
+msgstr ""
+"Email: \n"
+"nebojsa.spasojevic222@gmail.com"
+
+#: store/templates/store/kontakt.html:44
+msgid " Mobilni telefon: 063 553 406 "
+msgstr ""
+"Phone number:\n"
+"063 553 406"
+
+#: store/templates/store/kontakt.html:47
+msgid ""
+" Adresa firme: Rumenačka 108, stan\n"
+"        36"
+msgstr "Company adress: Rumenačka 108, stan 36"
+
+#: store/templates/store/kontakt.html:50
+msgid ""
+"\n"
+"        <b>LinkedIn:</b>\n"
+"        <p>\n"
+"          <a\n"
+"            class=\"fa fa-linkedin-square\"\n"
+"            href=\"https://colorlib.com/wp/bootstrap-navbar/\"\n"
+"            target=\"_blank\"\n"
+"          ></a>\n"
+"        </p>\n"
+"        "
+msgstr ""
+
+#: store/templates/store/kontakt.html:59
+msgid ""
+"\n"
+"        <b\n"
+"          >Takođe me možete pronaci u kafiću kod Štranda ispod mosta od 8h "
+"do\n"
+"          11h (od 6 do 9 meseca)</b\n"
+"        >"
+msgstr ""
+"\n"
+"You can also find me in the cafe near the Štrand under the bridge from 8 am "
+"to 11 am (from June to September)"
+
+#: store/templates/store/kurs.html:19 store/templates/store/nav.html:69
+msgid "Kurs"
+msgstr "Course"
+
+#: store/templates/store/kurs.html:53
+msgid "Pogledaj ostatak ponude"
+msgstr "View product"
+
+#: store/templates/store/loginPage.html:20 store/templates/store/nav.html:100
+msgid "Prijavi se"
+msgstr "Login"
+
+#: store/templates/store/loginPage.html:31
+msgid "Nemate nalog? Registruj se"
+msgstr "Don't have an account? Register"
+
+#: store/templates/store/loginPage.html:32
+msgid "ovde"
+msgstr "here"
+
+#: store/templates/store/mlin.html:19 store/templates/store/nav.html:50
+msgid "Mlin"
+msgstr "Mill"
+
+#: store/templates/store/mlin.html:22
+msgid ""
+" I Izrada projektne dokumentacije (Tehnologija,\n"
+"        aspiracija, pneumatski transport) "
+msgstr "I Project documentation (tehnology, aspiration, pneumatic transport) "
+
+#: store/templates/store/mlin.html:36
+msgid ""
+" snimanje i analiza postojećeg dijagrama mlevenja\n"
+"        kroz softver Ashe Protein tabelle i Milltech "
+msgstr ""
+"Actual flow diagram- making and analysing through softwares Ashe Protein and "
+"Milltech"
+
+#: store/templates/store/mlin.html:44
+msgid ""
+" procesne opreme (čistionica, mlin, silos za žito i\n"
+"      brašno) "
+msgstr "machines in cleaning, milling and storage plants"
+
+#: store/templates/store/mlin.html:56
+msgid ""
+" prevod uputstava za upotrebu mašina (sa engleskog\n"
+"        na srpski) "
+msgstr "translating manual instructions (english- serbian)"
+
+#: store/templates/store/nav.html:43
+msgid "Izdavaštvo"
+msgstr "Publishing"
+
+#: store/templates/store/nav.html:46
+#: store/templates/store/priceSaTerena.html:19
+msgid "Priče sa terena"
+msgstr "Stories from the field"
+
+#: store/templates/store/nav.html:56 store/templates/store/pecanje.html:19
+msgid "Pecanje"
+msgstr "Fishing"
+
+#: store/templates/store/nav.html:60 store/templates/store/pesme.html:19
+msgid "Pesme"
+msgstr "Song"
+
+#: store/templates/store/nav.html:66 store/templates/store/trgovina.html:42
+msgid "Trgovina"
+msgstr "Shop"
+
+#: store/templates/store/nav.html:80
+msgid "Pretraga"
+msgstr "Search"
+
+#: store/templates/store/nav.html:91
+msgid "Registracija"
+msgstr "Register"
+
+#: store/templates/store/nav.html:107
+msgid "Odjavi se"
+msgstr "Logout"
+
+#: store/templates/store/nav.html:126
+msgid "Jezici"
+msgstr "Languages"
+
+#: store/templates/store/nav.html:142
+msgid "Pozdrav"
+msgstr "Hello"
+
+#: store/templates/store/pesme.html:23
+msgid "Pesme Nebojše Spasojevića:"
+msgstr "Songs of Nebojša Spasojević"
+
+#: store/templates/store/pesme.html:34
+msgid "Pesma Ankice Spasojević:"
+msgstr "Song of Ankica Spasojević"
+
+#: store/templates/store/priceSaTerena.html:25
+msgid "1. Članak"
+msgstr "1. Article"
+
+#: store/templates/store/priceSaTerena.html:31
+msgid ""
+" Pšenica i kvalitet brašna u trgovini i\n"
+"                preradi "
+msgstr ""
+"Wheat and flour quality in trade and\n"
+"process"
+
+#: store/templates/store/priceSaTerena.html:37
+msgid ""
+" Izjava za 22. pekarsko mlinarske dane: Elieser\n"
+"              S. Posner, prevod: N.Spasojević "
+msgstr ""
+"Statement for the 22nd Bakery Mill Days: Elieser\n"
+"S. Posner, translation: N. Spasojević"
+
+#: store/templates/store/priceSaTerena.html:42
+msgid " Detaljnije"
+msgstr "Continue reading"
+
+#: store/templates/store/registerPage.html:22
+msgid "Register"
+msgstr "Register"
+
+#: store/templates/store/registerPage.html:30
+msgid "Grad"
+msgstr "City"
+
+#: store/templates/store/registerPage.html:33
+msgid "Adresa"
+msgstr "Adress"
+
+#: store/templates/store/registerPage.html:45
+msgid "Imate vec nalog?"
+msgstr "Already have an account?"
+
+#: store/templates/store/registerPage.html:47
+msgid "Prijavi"
+msgstr "Login"
+
+#: store/templates/store/registerPage.html:48
+msgid "se ovde"
+msgstr "here"
+
+#: store/templates/store/trgovina.html:61
+msgid "Dodaj u korpu"
+msgstr "Add to cart"
+
+#~ msgid ""
+#~ " Firma Mlinpek – mlinarstvo doo, Novi Sad, bavi\n"
+#~ "            se poslovima iz oblasti prerade žita – uglavnom pšenice:\n"
+#~ "          </h1>\n"
+#~ "          "
+#~ msgstr ""
+#~ "Company Mlinpek- mlinarstvo doo, Novi Sad is engaged in business of grain "
+#~ "processing- mainly wheat"
+
+#~ msgid "Price sa terena"
+#~ msgstr "Stories from the field"
+
+#~ msgid "Continue shopping"
+#~ msgstr "Continue shopping"
+
+#~ msgid "Items in cart:"
+#~ msgstr "Items in cart:"
+
+#~ msgid "Checkout"
+#~ msgstr "Checkout"
+
+#~ msgid "Image:"
+#~ msgstr "Image:"
+
+#~ msgid "Item:"
+#~ msgstr "Item:"
+
+#~ msgid "Price:"
+#~ msgstr "Price:"
+
+#~ msgid "Total:"
+#~ msgstr "Total:"
+
+#~ msgid "Cart"
+#~ msgstr "Cart"
+
+#~ msgid "Add to cart"
+#~ msgstr "Add to cart"
+
+#~ msgid "View product"
+#~ msgstr "View product"
+
+#~ msgid ""
+#~ "\n"
+#~ "              %(description)s "
+#~ msgstr ""
+#~ "\n"
+#~ "neki kao prevod opisa"
+
+#~ msgid "%(product.name)s"
+#~ msgstr "Prevedeno ime"
+
+#~ msgid "Firma"
+#~ msgstr "Company"
+
+#, fuzzy
+#~ msgid "Company"
+#~ msgstr "firma"
+
+#~ msgid "cao"
+#~ msgstr "hello"
+
+#~ msgid "translate me"
+#~ msgstr "prevedi me"

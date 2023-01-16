@@ -1,0 +1,177 @@
+{% load static %} {% load i18n %} {% load compress %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Izdavaštvo</title>
+    <link
+      rel="icon"
+      href="{% static 'image/mlinpek logo.png' %}"
+      type="image/x-icon"
+    />
+    {% compress css %}
+    
+
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+
+    {% endcompress %}
+  </head>
+  <body>
+    {%include 'store/nav.html'%} {% block content %}
+    <h1 id='naslovIzdavastvo'>{% translate 'Izdavastvo' %}</h1>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col izdavastvo-col">
+        <div class="card h-100">
+          <img
+            src="{% static 'image/proizvodnja pšeničnog brašna.jpg' %}"
+            class="card-img-top izdavastvo-slike"
+            alt="Proizvodnja pšeničnog brašna book"
+          />
+          <div class="card-body">
+            <h5 class="card-title">
+              <b>Naziv: Proizvodnja pseničnog brašna </b>
+            </h5>
+            <p><b>Autor: </b>E. S. Posner; A.N. Hibbs</p>
+
+            <p style="text-align: justify">
+              <b>Opis: </b>Sa detaljnim objašnjenjima aktuelne tehnologije,
+              opreme, metoda i radnih procedura, kniga predstavlja potpuni vodič
+              kroz pšenicno mlinarstvo. Opisani su specifični načini za pravilno
+              definisanje mlevnih operacija i postizanje maksimalnog kvaliteta
+              brašna uz istovremeni pregled praktičnih industrijskih iskustava.
+              Objašnjavajući sve faze procesa mlevenja - počevsi od skladištenja
+              i komponovanja mlevnih smeša, čišćenja i kondicioniranja,
+              prosejavanja i čišćenja krupice - knjiga predstavlja banku
+              korisnih podataka i odgovara na brojna tehnička i tehnološka
+              pitanja. Posle svakog poglavlja dat je spisak korišćene
+              literature, kao i spisak literature koju preporučuju autori.
+              Rečnik mlinarskih izraza nalazi se na kraju knjige.
+            </p>
+
+            <p>{% translate ' Na stanju: '%}3</p>
+            <p>{% translate 'Cena: ' %} 50e</p>
+          </div>
+          <div class="card-footer dvaDugmeta">
+            <button class="btn btn-success">
+              <a
+                href="https://docs.google.com/document/d/14BnlfIs24NtfOp-uKSwVwzYCo2qDDI3s/"
+                target='_blank'
+                style="color: white; text-decoration: none"
+              >
+                {% translate 'Pogledaj prve stranice' %}
+              </a>
+            </button>
+            <button class='btn btn-dark'>
+           <a href='https://docs.google.com/document/d/1ntDvBMBdeuCpfC0alBLaQ78kmE0yB-PQ' target='_blank' style='text-decoration: none; color: white;'>
+            {% translate ' Pogledaj prvo poglavlje knjige' %}
+           </a>
+            
+           
+            </button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col izdavastvo-col">
+        <div class="card h-100 #vademekum">
+          <img
+            src="{% static 'image/vademekum.jpg' %}"
+            class="card-img-top izdavastvo-slike"
+            alt="Vademekum book"
+          />
+          <div class="card-body">
+            <h5 class="card-title">
+              <b>Naziv: Vademekum </b>
+            </h5>
+            
+
+            <p>{% translate ' Na stanju: '%}20</p>
+            <p>{% translate 'Cena: ' %}20e</p>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-success">
+              <a
+                href="https://docs.google.com/document/d/1adRjQkOgd0CwktwMiRMERODtTpuO9-UixlWvWnHbkBs/edit"
+                style="color: white; text-decoration: none" target='_blank'
+              >
+                {% translate 'Pogledaj početak knjige' %}
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col izdavastvo-col">
+        <div class="card h-100">
+          <img
+            src="{% static 'image/prirucnik.jpg' %}"
+            class="card-img-top izdavastvo-slike"
+            alt="Priručnik za mlevenje žita book"
+          />
+          <div class="card-body">
+            <h5 class="card-title">
+              <b>Naziv: Prirucnik za mlevenje žita </b>
+            </h5>
+            <p><b>Autor: Grupa autora</b></p>
+
+            <p style="text-align: justify">
+              <b>Opis: </b>Po sadržaju i broju angažovanih autora, Priručnik za
+              mlevenje i ljuštenje žita je literatura vredna svake pažnje nas
+              mlinara - angažovanih u bilo kom segmentu ovog proizvodno
+              prerađivačkog programa &quot;od njive do trpeze&quot;. Kniga
+              obiluje praktičnim i upotrebljivim preporukama i podacima iz svih
+              oblasti skladištenja, prerade i čuvanja proizvoda mlevenja i
+              ljuštenja žita i po mom, sad već ne tako skromnom iskustvu,
+              predstavlja sam vrh raspoložive stručne literature.
+            </p>
+
+            <p>{% translate ' Na stanju: '%}20</p>
+            <p>{% translate 'Cena: ' %}89e</p>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-success">
+              <a
+                href="https://docs.google.com/document/d/13ZKucDJiDWOmBo77WFisa8CE_SFvphPm54PeMTWqo8E/edit"
+                style="color: white; text-decoration: none" target='_blank'
+              >
+                {% translate 'Pogledaj početak knjige' %}
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer id='izdavastvoFooter'>
+      <p>Copyright © Mlinpek mlinarstvo 2020</p>
+    </footer>
+    <style>
+      .h-100{
+        background-color: rgb(255, 255, 177) !important;
+        margin-left: 10px;
+      }
+      .card-img-top {
+        width: 420px;
+        height: 500px;
+        align-items: center;
+      }
+      footer {
+        text-align: center;
+        padding: 50px;
+        border-top: 3px black solid;
+        background-color: rgb(62, 134, 62);
+        margin-top: 20px;
+        font-size: 20px;
+      }
+
+     
+    </style>
+
+
+    {% endblock %}
+  </body>
+</html>

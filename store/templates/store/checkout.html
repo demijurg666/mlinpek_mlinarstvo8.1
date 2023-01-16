@@ -1,0 +1,175 @@
+{% load static %} {% load i18n %} {% load compress %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link
+    rel="icon"
+    href="{% static 'image/mlinpek logo.png' %}"
+    type="image/x-icon"
+  />
+    
+    {% compress css %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    {% endcompress %}
+    
+</head>
+<body>
+    {%include 'store/nav.html'%}
+    {% block content %}
+    
+    <h1>{% translate 'Kasa' %}</h1>
+
+    <div class="container">
+        <div class="row">
+          <div class="col checkout-col">
+            
+            <button class="btn btn-dark" id='backToCart'>
+                <a href="{% url 'cart' %}" >
+                  <h1>{% translate 'Nazad u korpu' %}</h1>
+                 </a>
+            </button>
+
+            <div class="col checkout-col">       
+                    
+              <p style="" class='summary'>{% translate 'Pregled porudžbine' %}</p>
+            </div>
+            
+          </div>
+          <hr>
+        </div>
+        <div class="row checkout-row">
+          <div class="col">
+           <p class='checkoutOpis'>
+            {% translate 'Slika' %} 
+            
+        </p>
+          </div>
+          <div class="col">
+            <p class='checkoutOpis'>
+              {% translate 'Proizvod' %}
+         </p>
+           </div>
+           <div class="col">
+            <p class='checkoutOpis'>
+              {% translate 'Cena' %}
+         </p>
+           </div>
+           <div class="col">
+            <p class='checkoutOpis'>
+              
+              {% translate 'Kvantitet' %}
+         </p>
+           </div>
+          <hr>
+        </div>
+
+        {% for item in items %}
+        <div class="row checkout-row-images">
+            
+            <div class="col">
+             <img src="{{item.product.imageURL}}" alt="Image of your product" class='checkoutImg'>
+            </div>
+            <div class="col">
+                {{item.product.name}}
+               </div>
+               <div class="col">
+               {{item.product.price|floatformat:2}} e
+               </div>
+               <div class="col">
+                {{item.quantity}} 
+               </div>
+            <hr>
+          </div>
+          {% endfor %}
+          <div class="col checkout-col">
+            <b style="font-size: 25px;">
+              {% translate 'Proizvodi: ' %}
+              {{order.get_cart_items}}</b>
+            
+            <br>
+            <b style="font-size: 25px;">
+              {% translate 'Ukupno: ' %} 
+               {{order.get_cart_total}} e</b>
+               
+            
+           </div>
+           <button type="button" class="btn btn-danger sendorder" data-toggle="modal" data-target="#exampleModalCenter">
+      
+            <p>{% translate 'Potvrdite narudžbinu' %}</p> 
+          </button>
+      </div>
+      
+      
+<!--submit order-->
+      <!-- Button trigger modal -->
+      
+     
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+     
+      <div class="modal-body">
+        {% translate ' Da li ste sigurni da zelite da kupite ove proizvode?' %}
+       
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          {% translate "Ne" %} 
+      </button>
+        <form action="{% url 'checkout' %}" method="POST" id="posaljipodatke" >
+          {% csrf_token %}
+          <input type="submit" name="purchase" class="btn btn-danger btn-block">
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+    
+      <style>
+        .summary{
+          font-size: 30px; 
+          font-weight:bold;
+          width: 50% !important;
+        }
+          .container{
+              border: 1px black solid;
+              margin-top: 50px;
+              margin-bottom: 20px;
+              box-shadow: hsl(0, 0%, 80%) 0 0 16px;
+          }
+
+          .checkoutOpis{
+            font-size: 20px; 
+            font-weight: bold;
+          }
+          .checkoutImg{
+            width: 200px;
+            height: 200px;
+          }
+
+          .sendorder{
+            align-content: center;
+          }
+          .sendorder p{
+            font-size: 25px;
+          }
+        
+
+          #backToCart h1{
+            font-size: 25px;
+            color: white;
+           
+          }
+          
+      </style>
+
+   
+    {% endblock %}
+</body>
+</html>

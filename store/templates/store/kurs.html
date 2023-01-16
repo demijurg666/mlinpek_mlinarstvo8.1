@@ -1,0 +1,79 @@
+{% load static %} {% load i18n %} {% load compress %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kurs</title>
+    <link
+      rel="icon"
+      href="{% static 'image/mlinpek logo.png' %}"
+      type="image/x-icon"
+    />
+    {% compress css %}
+
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    {% endcompress %}
+  </head>
+  <body>
+    {%include 'store/nav.html'%} {% block content %}
+    <h1 id="kursNaslov">{% translate 'Kurs' %}</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100 kursCard">
+          <img
+            src="{% static 'image/kurs.jpg' %}"
+            class="card-img-top"
+            alt="Osnovni kurs tehnologije prerade žita image"
+            id="kursSlika"
+          />
+          <div class="card-body kursBody">
+            <h5 class="card-title">
+              <b>Naziv: Osnovni kurs tehnologije prerade žita </b>
+            </h5>
+            <p>
+              <b>Autori: </b>Milan N. Skendžić, dipl. ing. tehnolog i Nebojša
+              Spasojević, dipl. ing tehnolog
+            </p>
+
+            <p style="text-align: justify">
+              <b>Ponuda: </b>Dostavljamo Vam našu Ponudu za stručne usluge kod
+              izvođenja obuke Vaših stručnih kadrova na vođenju tehnološkog
+              procesa prerade pšenice. Napominjemo da će se obuka izvoditi u
+              Vašim pogonima i tokom obuke biće kroz konsultacije definisani
+              neophodni zahvati na konsolidaciji pojedinih tehnoloških celina.
+            </p>
+
+            <p>{% translate 'Cena: ' %} 7000e</p>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-success">
+              <a
+                href="{% url 'kursTehnologije' %}"
+                style="color: white; text-decoration: none"
+              >
+                {% translate 'Pogledaj ostatak ponude' %}
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer id="footerKurs">
+      <p>Copyright © Mlinpek mlinarstvo 2020</p>
+    </footer>
+
+    {% endblock %}
+    <style>
+      footer {
+        margin-top: 50px;
+        text-align: center;
+        padding: 50px;
+        border-top: 3px black solid;
+        background-color: rgb(62, 134, 62);
+        font-size: 20px;
+      }
+    </style>
+  </body>
+</html>

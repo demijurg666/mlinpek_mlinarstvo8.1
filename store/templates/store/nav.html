@@ -1,0 +1,255 @@
+{% load i18n %}
+{% load static %} 
+{% load compress %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mlinpek mlinarstvo</title>
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+      
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg " id='Navbar'>
+        <div class="container-fluid">
+        
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="toggler">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'store' %}" >
+                        <img src="{% static 'image/mlinpek logo.png' %}" alt="Mlinpek mlinarstvo logo" id='logo'>
+                    </a>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'izdavastvo' %}" >{% translate 'Izdavaštvo' %}</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'priceSaTerena' %}" >{% translate  'Priče sa terena'%}</a>
+                  </li>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'mlin' %}"> {% translate 'Mlin'%}</a>
+                </li>
+              </li>
+             
+            
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'pecanje' %}">{% translate 'Pecanje'%}</a>
+              </li>
+    
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'pesme' %}" >{% translate 'Pesme'%}</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'kontakt' %}" id="pecanjePrevedi">{% translate 'Kontakt'%}</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'trgovina' %}" >{% translate 'Trgovina'%}</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'kurs' %}">{% translate 'Kurs'%}</a>
+              </li>
+
+             
+                
+            </ul>
+            <form class="form-inline searchProducts" method="get" action='{% url  "searchProducts" %}'>
+              {% csrf_token %}
+              <input class="form-control mr-sm-2" type="search" 
+              
+              aria-label="Search" name="searched">
+              <button class="btn btn-danger my-2 my-sm-0" type="submit" id='trazi'>{% translate 'Pretraga' %}</button>
+            </form>
+          
+           
+          </div>
+          
+        </div>
+      </nav>
+      <ul class="rightButtons">
+        <li class="nav-item">
+          <button class="btn btn-warning">
+            <a class="nav-link" href="{% url 'registerPage' %}">{% translate 'Registracija' %}</a> 
+          </button>
+            
+          </li>
+
+          
+          <li class="nav-item">
+            <button class="btn btn-success">
+              <a class="nav-link" href="{% url 'loginPage' %}">
+                {% translate 'Prijavi se' %}
+                </a>
+            </button>
+            
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-dark" id='logout'>
+              <a class="nav-link" href="{% url 'logoutPage' %}">{% translate 'Odjavi se' %}</a>
+            </button>          
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'cart' %}">
+                <img src="{% static 'image/korpa.png' %}" alt="Cart" width="50" height="50">
+            </a>
+            
+          </li>
+          <p id="cart-total">{{cartItems}}</p>
+        </ul>
+
+
+        <br>
+        <br>
+        <br>
+        
+        <div class="dropdown" id='languages'>
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {% translate 'Jezici' %} 
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            {% get_current_language as LANGUAGE_CODE %}
+            {% get_available_languages as LANGUAGES %}
+            {% get_language_info_list for LANGUAGES as languages %}
+            
+            {% for lang in languages %}
+            <li>
+            <a href="/{{ lang.code  }}/">
+              {{lang.name_local}}
+            </a>          
+        {% endfor %}
+          
+        </div>
+       
+    <p> {% translate 'Pozdrav' %}, <span  style="color: red;">  {{request.user}}</span></p>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">&#x2191;</button>
+    {% compress js %}
+    <script>
+      // Get the button
+      let mybutton = document.getElementById("myBtn");
+      
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+      
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+      </script>
+      {% endcompress %}
+      
+      <style>
+        #Navbar{
+          background-color: rgb(62, 134, 62);
+          position: sticky !important;
+          top: 0;
+          z-index: 99;
+          opacity: 1;
+        }
+        #Navbar li{
+          font-size: 25px;
+          color: white !important;
+          padding-top: 50px;
+
+        }
+        #Navbar a{
+          color: white !important;
+        }
+        #Navbar a:hover{
+          color: #f2a65c !important;
+
+        }
+        #logo{
+          width: 170px;
+          height: 120px;
+        }
+
+        .searchProducts{
+          display: inline-flex;
+          
+        }
+        #trazi{
+          background-color: #f2a65c !important;
+
+        }
+
+        .rightButtons{
+          display: inline-flex !important;
+          list-style: none;
+          margin-left: 10px !important;
+          float: right;
+        }
+        #logout{
+          background-color: #f2a65c !important;
+        }
+        #languages button{
+          float: right !important;
+          background-color: #f2a65c !important;
+
+        }
+
+        #languages a {
+          text-decoration: none;
+        }
+        
+        #cart-total {
+        display: block;
+        text-align: center;
+        color: #fff;
+        background-color: red;
+        width: 20px;
+        height: 25px;
+        border-radius: 50%;
+        font-size: 14px;
+}
+
+      #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: rgb(62, 134, 62);
+        border: 1px black solid;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+      }
+
+      #myBtn:hover {
+        background-color: #555;
+      }
+
+
+      </style>
+
+
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+      
+</body>
+</html>

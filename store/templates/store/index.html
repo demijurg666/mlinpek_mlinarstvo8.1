@@ -1,0 +1,178 @@
+{% load i18n %} {% load static %} {% load compress %}
+<!DOCTYPE html>
+<html lang="sr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Prerada žita i pšenice, Izrada projektne dokumentacije, Nadzor nad montažom opreme i puštanje u rad, Konsultacije na temu mlinarstva
+    "
+    />
+    <meta
+      name="keywords"
+      content="Mlinpek, pšenica, žito, merenje, podešavanje, obuka, trgovina"
+    />
+    <meta name="author" content="Darko Spasojevic" />
+    <title>Mlinpek mlinarstvo</title>
+    <link
+      rel="icon"
+      href="{% static 'image/mlinpek logo.png' %}"
+      type="image/x-icon"
+    />
+    {% compress css %}
+
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    {% endcompress %} {% compress js %}
+    <script src="{% static 'js/cart.js' %}"></script>
+    {% endcompress %}
+  </head>
+  <body>
+    {%include 'store/nav.html'%} {% block content %}
+
+    <div class="textDiv" id="prviDiv">
+      <div class="headerOverlay"></div>
+      <div id="paralaxTekst">
+        <div class="uvod">
+          <h1>
+            {% blocktranslate %} Mlinpek – mlinarstvo doo, Novi Sad
+            {%endblocktranslate%}
+          </h1>
+
+          <h2>
+            {% blocktranslate %} Bavi se poslovima iz oblasti prerade žita –
+            uglavnom pšenice: {% endblocktranslate %}
+          </h2>
+          <br />
+
+          <h2>
+            {% blocktranslate %} I Izrada projektne dokumentacije (Tehnologija,
+            aspiracija, pneumatski transport) {% endblocktranslate %}
+          </h2>
+
+          <h2>
+            {% translate 'II Nadzor nad montažom opreme i puštanje u rad' %}
+          </h2>
+
+          <h2>{% translate ' III Konsultacije na temu mlinarstva' %}</h2>
+
+          <h2>{% translate 'IV Izdavaštvo:' %}</h2>
+
+          <h2>{% translate 'V Merenja:' %}</h2>
+          <p>➡️{% translate 'parametara strujanja vazduha (Q,dP)' %}</p>
+          <p>➡️{% translate 'efikasnosti rada mašina' %}</p>
+          <p>
+            ➡️{%blocktranslate%} snimanje i analiza postojećeg dijagrama
+            mlevenja kroz softver Ashe Protein tabelle i Milltech
+            {%endblocktranslate %}
+            <br />
+          </p>
+          <h2>{% translate 'VI Podešavanja:' %}</h2>
+          <p>➡️{% translate 'aspiracionih i pneumatskih sistema' %}</p>
+
+          ➡️{%blocktranslate%} procesne opreme (čistionica, mlin, silos za žito
+          i brašno) {%endblocktranslate %}
+          <br />
+          <br />
+
+          <h2>{% translate 'VII Obuka kadrova za:' %}</h2>
+
+          <p>➡️ {% translate 'kratka škola mlevenja:' %}</p>
+
+          <p>➡️ {% translate 'rad na procesnim mašinama' %}</p>
+
+          ➡️{% blocktranslate %} prevod uputstava za upotrebu mašina (sa
+          engleskog na srpski) {%endblocktranslate %}
+          <br />
+          <br />
+
+          <h2>{% translate 'VIII Trgovina:' %}</h2>
+
+          <p>➡️ {% translate 'uvoz mlinske opreme' %}</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Copyright © Mlinpek mlinarstvo 2020</p>
+    </footer>
+
+    <style>
+      .uvod {
+        margin: 30px 50px 0 50px;
+        text-align: center;
+      }
+      .uvod h1 {
+        text-shadow: 0 0 3px #ff0000;
+        font-size: 50px;
+        padding-bottom: 20px;
+      }
+
+      .uvod h2 {
+        font-style: italic;
+        padding: 5px;
+      }
+
+      h4 {
+        font-size: 30px;
+      }
+
+      .col {
+        margin: 10px;
+        height: 400px;
+      }
+
+      .row .col a {
+        color: white;
+        text-decoration: none;
+        font-size: 30px;
+      }
+
+      .row img {
+        width: 300px;
+        height: 300px;
+      }
+
+      .headerOverlay {
+        height: 150vh;
+        width: 100vw;
+        position: absolute;
+        left: 0;
+        background: rgb(255, 217, 151);
+        z-index: 1;
+        opacity: 0.65;
+      }
+
+      #prviDiv {
+        background-image: url("/static/image/logo1.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+      }
+
+      .textDiv {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 150vh;
+      }
+
+      #paralaxTekst {
+        padding: 8px 24px;
+        margin: 0 50px 0 50px;
+        z-index: 2;
+      }
+
+      footer {
+        text-align: center;
+        padding: 50px;
+        border-top: 3px black solid;
+        background-color: rgb(62, 134, 62);
+        font-size: 20px;
+      }
+    </style>
+
+    {% endblock %}
+  </body>
+</html>

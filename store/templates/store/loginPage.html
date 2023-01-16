@@ -1,0 +1,85 @@
+{% block content %} {% load static %}{% load i18n %} {% load compress %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      rel="icon"
+      href="{% static 'image/mlinpek logo.png' %}"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    {%include 'store/nav.html'%}
+    <form action="" method="POST" id="loginForm">
+      {% csrf_token %}
+      <div class="formContainer">
+        <h1 id="naslovLogin">{% translate "Prijavi se" %}</h1>
+
+        <div class="container">
+          <input type="text" name="username" id="" placeholder="Username" />
+          <input type="password" name="password" id="" placeholder="Password" />
+          {% for message in messages %}
+          <p id="errors">{{message}}</p>
+          {% endfor %}
+          <input type="submit" name="submit" id="loginsubmit" />
+
+          <p id="haveacc">
+            {% translate "Nemate nalog? Registruj se" %}
+            <a href="{% url 'registerPage' %}"> {% translate "ovde" %} </a>
+          </p>
+        </div>
+      </div>
+    </form>
+
+    <style>
+      #loginForm {
+        display: flex;
+        justify-content: center;
+      }
+      .formContainer {
+        text-align: left;
+        border: #4f868c solid 5px;
+        background: #f2a65c;
+      }
+
+      #naslovLogin {
+        text-align: center;
+        font-size: 50px;
+        padding: 20px 0 20px 0;
+      }
+      .container {
+        padding: 16px 0;
+        text-align: left;
+      }
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 16px 10px;
+        margin-bottom: 30px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        font-size: 30px;
+      }
+      #haveacc {
+        text-align: center;
+      }
+
+      #loginsubmit {
+        width: 100%;
+        margin-top: 20px;
+        font-size: 20px;
+        background-color: #28a745;
+        border-color: #28a745;
+      }
+
+      #errors {
+        color: red;
+      }
+    </style>
+  </body>
+</html>
+{% endblock content%}

@@ -1,0 +1,89 @@
+{% load static %} {% load i18n %} {% load compress %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Price sa terena</title>
+    <link
+      rel="icon"
+      href="{% static 'image/mlinpek logo.png' %}"
+      type="image/x-icon"
+    />
+    {% compress css %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    {% endcompress %}
+  </head>
+  <body>
+    {%include 'store/nav.html'%} {% block content %}
+    <h1>{% translate 'Priče sa terena' %}</h1>
+
+    <div class="clanciSve">
+      <div class="container clanci">
+        <div class="row">
+          <div class="col">
+            <p class="clanak">{% translate '1. Članak' %}</p>
+            <br />
+          </div>
+          <div class="col">
+            <p class="nazivClanka">
+              <b>
+                {%blocktranslate%} Pšenica i kvalitet brašna u trgovini i
+                preradi {%endblocktranslate %}
+              </b>
+            </p>
+            <br />
+            <p class="textClanak">
+              {%blocktranslate%} Izjava za 22. pekarsko mlinarske dane: Elieser
+              S. Posner, prevod: N.Spasojević {%endblocktranslate %}
+            </p>
+            <button class="btn btn-success">
+              <a href="{% url 'psenicaikvalitetbrasnaprica' %}">
+                {% translate ' Detaljnije' %}
+              </a>
+            </button>
+          </div>
+          <div class="col">
+            <img
+              src="{% static 'image/teren.JPG' %}"
+              alt="Pšenica i kvalitet brašna u trgovini i preradi"
+              width="400"
+              height="300"
+              id="slikaTeren"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endblock %}
+    <footer>
+      <p>Copyright © Mlinpek mlinarstvo 2020</p>
+    </footer>
+  </body>
+  <style>
+    .clanciSve {
+      margin-top: 100px;
+    }
+    .clanci {
+      margin-bottom: 50px;
+      padding-top: 40px;
+      font-size: 20px;
+      border-top: 1px solid black;
+    }
+    .clanci img {
+      float: right;
+    }
+    .clanci button a {
+      text-decoration: none;
+      color: white;
+    }
+    footer {
+      text-align: center;
+      padding: 50px;
+      border-top: 3px black solid;
+      background-color: rgb(62, 134, 62);
+      font-size: 20px;
+    }
+  </style>
+</html>

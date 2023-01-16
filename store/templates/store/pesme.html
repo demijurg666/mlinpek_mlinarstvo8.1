@@ -1,0 +1,48 @@
+{% load i18n %} {% load static %} {% load embed_video_tags %} {% load compress%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pesme</title>
+    <link
+      rel="icon"
+      href="{% static 'image/mlinpek logo.png' %}"
+      type="image/x-icon"
+    />
+    {% compress css %}
+
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    {% endcompress %}
+  </head>
+  <body>
+    {%include 'store/nav.html'%} {% block content %}
+    <h1>{% translate 'Pesme' %}</h1>
+    <br />
+    <br />
+    <br />
+    <h2>{% translate 'Pesme Nebojše Spasojevića:' %}</h2>
+
+    <object
+      data="https://docs.google.com/document/d/1sXO1nQn6ma_XYfaCgzIhwctVgTDYi90u"
+      width="800"
+      height="500"
+      id="nesapesme"
+    ></object>
+    <br />
+    <br />
+    <br />
+
+    <h2>{% translate 'Pesma Ankice Spasojević:' %}</h2>
+    <a
+      href="https://www.youtube.com/watch?v=RlZ4YGSQapk&ab_channel=AnkicaSpasojevi%C4%87"
+      >Pesmo moja, sama se napiši</a
+    >
+
+    <div id="ankicavideo">
+      {% for video in videos %} {% video video.url '826x440'%} {{video.title}}
+      {%endfor%} {% endblock %}
+    </div>
+  </body>
+</html>

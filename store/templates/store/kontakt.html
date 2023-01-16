@@ -1,0 +1,98 @@
+{% load static %}{% load i18n %} {% load compress %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakt</title>
+    <link
+      rel="icon"
+      href="{% static 'image/mlinpek logo.png' %}"
+      type="image/x-icon"
+    />
+    {% compress css %}
+
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    {% endcompress %}
+  </head>
+  <body>
+    {%include 'store/nav.html'%} {% block content %}
+
+    <h1 id="kontakt">{% translate 'Kontakt' %}</h1>
+    <hr />
+    <div class="podaci">
+      <div class="osnovniPodaci">
+        {%blocktranslate%} Email: nebojsa.spasojevic222@gmail.com
+        {%endblocktranslate %}
+        <br />
+        {%blocktranslate%} Mobilni telefon: 063 553 406 {%endblocktranslate %}
+        <br />
+
+        {%blocktranslate%} Adresa firme: Rumenačka 108, stan
+        36{%endblocktranslate %}
+        <br />
+        {%blocktranslate%}
+
+        <a
+          href='https://www.linkedin.com/authwall?trk=bf&trkInfo=AQFyALPqdg-TpgAAAYV99CNwmpj0VBq0FITDH9fXRlhAfMHdySmYXEhLszsFP5wJAexwRTYuryuCKP5xjGHZ5aVBOfgZR-6Wq2vanLDsymz8XukTQzOCRFzWmCN1RwrCv2w5njk=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fnebojsa-spasojevic-98a281ab%3FmidSig%3D1ifVGrYUYGoGA1%26eid%3D6haaey-lcezzotk-kl%26midToken%3DAQEhELYp3WBVBA%26trkEmail%3Deml-email_pymk_02-header-0-profile_glimmer-null-6haaey%257Elcezzotk%257Ekl-null-null%26lipi%3Durn%253Ali%253Apage%253Aemail_email_pymk_02%253BFCpu44sWSeGMrCXbOm1nEA%253D%253D%26trk%3Deml-email_pymk_02-header-0-profile_glimmer%26originalSubdomain%3Drs"'
+        >
+          <b>LinkedIn</b></a
+        >
+        <br />
+
+        {%endblocktranslate %} {%blocktranslate%}
+        <b
+          >Takođe me možete pronaci u kafiću kod Štranda ispod mosta od 8h do
+          11h (od 6 do 9 meseca)</b
+        >{%endblocktranslate %}
+      </div>
+      <div>
+        <div class="mapouter">
+          <div class="gmap_canvas">
+            <iframe
+              width="600"
+              height="500"
+              id="gmap_canvas"
+              src="https://maps.google.com/maps?q=rumenacka%20108&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+            ></iframe
+            ><a href="https://2piratebay.org"></a><br />
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer id="kontakt-footer">
+      <p>Copyright © Mlinpek mlinarstvo 2020</p>
+    </footer>
+
+    {% endblock %}
+  </body>
+  <style>
+    #kontakt {
+      padding-bottom: 50px;
+      font-size: 40px;
+    }
+    .podaci {
+      display: grid;
+      grid-template-columns: auto auto;
+      padding-left: 10px;
+    }
+    .podaci h1 {
+      color: red;
+    }
+    .osnovniPodaci {
+      font-size: 30px;
+    }
+    footer {
+      text-align: center;
+      padding: 50px;
+      border-top: 3px black solid;
+      background-color: rgb(62, 134, 62);
+      font-size: 20px;
+    }
+  </style>
+</html>

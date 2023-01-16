@@ -1,0 +1,59 @@
+{%include 'store/nav.html'%} {% block content %}
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  {% if products %} {% for product in products %}
+  <div class="col searchResult">
+    <div class="card h-100 searchh-100">
+      <img
+        src="{{product.image.url}}"
+        class="card-img-top searchedImage"
+        alt="Searched product"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{product.name}}</h5>
+
+        <p>{{product.description}}</p>
+        <p>Na stanju: {{product.instock}}</p>
+        <p>Cena: {{product.price|floatformat:2}} e</p>
+      </div>
+      <div class="card-footer nazadTrgovina">
+        <button class="btn btn-dark update-cart">
+          <a href='{% url "trgovina" %}'>Trgovina</a>
+        </button>
+      </div>
+    </div>
+  </div>
+  {% endfor %} {% else %}
+  <p style="text-align: center; font-size: 30px; padding-top: 50px">
+    Could not find searched item
+  </p>
+  {% endif %}
+</div>
+
+{% endblock %}
+
+<style>
+  .searchedImage {
+    width: 520px;
+    height: 600px;
+    float: right;
+    margin-left: 50px;
+  }
+
+  .searchh-100 {
+    background: none;
+  }
+  .card-footer a {
+    color: white;
+    text-decoration: none;
+  }
+
+  footer {
+    margin-top: 50px;
+    text-align: center;
+    padding: 50px;
+    border-top: 3px black solid;
+    background-color: rgb(62, 134, 62);
+    font-size: 20px;
+  }
+</style>
