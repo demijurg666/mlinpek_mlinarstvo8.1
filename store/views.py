@@ -20,13 +20,8 @@ from django.views.decorators.csrf import requires_csrf_token
 
 #  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 
   
-
-
-
-
-
 # Create your views here.
-
+#ncjdndk;cm;kcm'dc,adcdlsdfsdfsdfsdf
 
 def store(request):
     
