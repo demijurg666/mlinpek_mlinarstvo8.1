@@ -22,6 +22,10 @@ from django.views.decorators.csrf import requires_csrf_token
   
 # Create your views here.
 #ncjdndk;cm;kcm'dc,adcdlsdfsdfsdfsdf
+#ncjdndk;cm;kcm'dc,adcdlsdfsdfsdfsdf
+#ncjdndk;cm;kcm'dc,adcdlsdfsdfsdfsdf
+#ncjdndk;cm;kcm'dc,adcdlsdfsdfsdfsdf
+#ncjdndk;cm;kcm'dc,adcdlsdfsdfsdfsdf
 
 def store(request):
     
