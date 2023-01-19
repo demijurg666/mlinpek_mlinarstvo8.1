@@ -48,6 +48,24 @@ def izdavastvo(request):
     return render(request, 'store/izdavastvo.html', context)
 
 
+
+def proizvodnjaPsenicnogBrasna(request):
+    return render(request, 'store/izdavastvopdfs/proizvodnjaPsenicnogBrasna.html')
+
+def prvopoglavljeproizvodnjapsenicnog(request):
+    return render(request, 'store/izdavastvopdfs/prvopoglavljeproizvodnjapsenicnog.html')
+
+
+
+def vademekumPdf(request):
+      return render(request, 'store/izdavastvopdfs/vademekumPdf.html')
+
+
+def prirucnikZaMlevenjeZitaPdf(request):
+   return render(request, 'store/izdavastvopdfs/prirucnikZaMlevenjeZitaPdf.html')
+
+
+
 def priceSaTerena(request):
     return render(request, 'store/priceSaTerena.html')
 

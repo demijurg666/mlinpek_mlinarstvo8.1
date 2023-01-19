@@ -36,6 +36,13 @@ urlpatterns += i18n_patterns(
     path('', include('store.urls')),
     path('', views.store, name='store'),
     path('izdavastvo/', views.izdavastvo, name='izdavastvo'),
+
+    path('proizvodnjaPsenicnogBrasna/', views.proizvodnjaPsenicnogBrasna, name='proizvodnjaPsenicnogBrasna'),
+    path('prvopoglavljeproizvodnjapsenicnog/', views.prvopoglavljeproizvodnjapsenicnog, name='prvopoglavljeproizvodnjapsenicnog'),
+    path('vademekumPdf/', views.vademekumPdf, name='vademekumPdf'),
+    path('prirucnikZaMlevenjeZitaPdf/', views.prirucnikZaMlevenjeZitaPdf, name='prirucnikZaMlevenjeZitaPdf'),
+    path('psenicaikvalitetbrasnaprica/', views.psenicaikvalitetbrasnaprica, name='psenicaikvalitetbrasnaprica'),
+
     path('priceSaTerena/', views.priceSaTerena, name='priceSaTerena'),
     path('trgovina/', views.trgovina, name='trgovina'),
     path('pecanje/', views.pecanje, name='pecanje'),
@@ -49,9 +56,7 @@ urlpatterns += i18n_patterns(
     path('loginPage/', views.loginPage, name='loginPage'),
     path('logoutPage/', views.logoutPage, name='logoutPage'),
     path('searchProducts/', views.searchProducts, name='searchProducts'),
-    
     path('psenicaikvalitetbrasnaprica/', views.psenicaikvalitetbrasnaprica, name='psenicaikvalitetbrasnaprica'),
-
     path('kursTehnologije/', views.kursTehnologije, name='kursTehnologije'),
     
 )

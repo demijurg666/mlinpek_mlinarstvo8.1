@@ -58,18 +58,20 @@
           <div class="card-footer dvaDugmeta">
             <button class="btn btn-success">
               <a
-                href="https://docs.google.com/document/d/14BnlfIs24NtfOp-uKSwVwzYCo2qDDI3s/"
-                target='_blank'
+                href="{% url 'proizvodnjaPsenicnogBrasna' %}"
                 style="color: white; text-decoration: none"
+                target="_blank"
               >
                 {% translate 'Pogledaj prve stranice' %}
               </a>
             </button>
             <button class='btn btn-dark'>
-           <a href='https://docs.google.com/document/d/1ntDvBMBdeuCpfC0alBLaQ78kmE0yB-PQ' target='_blank' style='text-decoration: none; color: white;'>
+            <a
+              href="{% url 'prvopoglavljeproizvodnjapsenicnog' %}"
+              style="color: white; text-decoration: none"
+              target="_blank"
+            >
             {% translate ' Pogledaj prvo poglavlje knjige' %}
-           </a>
-            
            
             </button>
             </a>
@@ -96,8 +98,9 @@
           <div class="card-footer">
             <button class="btn btn-success">
               <a
-                href="https://docs.google.com/document/d/1adRjQkOgd0CwktwMiRMERODtTpuO9-UixlWvWnHbkBs/edit"
-                style="color: white; text-decoration: none" target='_blank'
+              href="{% url 'vademekumPdf' %}"
+              target="_blank"
+              style='color: white;'
               >
                 {% translate 'Pogledaj početak knjige' %}
               </a>
@@ -136,8 +139,9 @@
           <div class="card-footer">
             <button class="btn btn-success">
               <a
-                href="https://docs.google.com/document/d/13ZKucDJiDWOmBo77WFisa8CE_SFvphPm54PeMTWqo8E/edit"
-                style="color: white; text-decoration: none" target='_blank'
+              href="{% url 'prirucnikZaMlevenjeZitaPdf' %}"
+              target="_blank"
+              style='color: white;'
               >
                 {% translate 'Pogledaj početak knjige' %}
               </a>
