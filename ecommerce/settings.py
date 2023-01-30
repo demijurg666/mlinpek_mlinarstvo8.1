@@ -31,7 +31,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-CSRF_TRUSTED_ORIGINS = ['https://mlinpek-mlinarstvo.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://mlinpek-mlinarstvo7.up.railway.app']
 
 
 # Application definition
@@ -191,7 +191,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'darko.spasojevic.django24@gmail.com'
-EMAIL_HOST_PASSWORD = 'javknqwchdtpzwnc'
+EMAIL_HOST_USER = 'darko.spasojevic.django25@gmail.com'
+EMAIL_HOST_PASSWORD = 'rfgnlzhmepjswjsv'
 #novo gugl pravilo je to da na ovakve sajtove vise ne stavljas svoju originalnu gmail lozinku, vec moras da odes u gugl security da ti on da neku random lozinku koju ces ubaciti ovde
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
