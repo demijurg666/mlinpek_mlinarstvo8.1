@@ -192,6 +192,6 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'darko.spasojevic.django25@gmail.com'
-EMAIL_HOST_PASSWORD = 'rfgnlzhmepjswjsv'
+EMAIL_HOST_PASSWORD = 'uhwherhbclcngtmc'
 #novo gugl pravilo je to da na ovakve sajtove vise ne stavljas svoju originalnu gmail lozinku, vec moras da odes u gugl security da ti on da neku random lozinku koju ces ubaciti ovde
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
